@@ -1,16 +1,25 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
-from models import Post
-
-
+from models import Post, Category
+from django.shortcuts import render_to_response, get_object_or_404
 
 # Create your views here.
+
 def index(request):
-    post_list = Post.objects.order_by('-pub_date')
-    template = loader.get_template('blog/index.html')
-    context = {
-        'post_list': post_list,
-    }
-    return HttpResponse(template.render(context, request))
+    return render_to_response('blog/index.html', {
+        'categories': Category.objects.all(),
+        'posts': Post.objects.all()
+    })
+
+def view_post(request, slug):   
+    return render_to_response('blog/view_post.html', {
+        'post': get_object_or_404(Post, slug=slug)
+    })
+
+def view_category(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    return render_to_response('blog/view_category.html', {
+        'category': category,
+        'posts': Post.objects.filter(category=category)[:5]
+    })
