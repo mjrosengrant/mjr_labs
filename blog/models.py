@@ -4,10 +4,12 @@ from django.db import models
 from django.db.models import permalink
 from django.core.urlresolvers import reverse
 
+from tinymce.models import HTMLField
+
 class Post(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    body = models.TextField()
+    body = HTMLField()
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('blog.Category')
 

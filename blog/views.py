@@ -23,3 +23,9 @@ def view_category(request, slug):
         'category': category,
         'posts': Post.objects.filter(category=category)[:5]
     })
+
+def view_portfolio(request):
+    return render_to_response('blog/portfolio.html')
+
+def add_post(request):
+    return render_to_response('blog/wysiwyg.html')

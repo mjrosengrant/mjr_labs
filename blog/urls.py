@@ -16,4 +16,12 @@ urlpatterns = [
 	    name='view_blog_category'
     ),
 
+	url(r'^portfolio/', 
+		views.view_portfolio, 
+	    name='view_blog_portfolio'
+    ),
+	url(r'^wysiwyg/', 
+		views.add_post, 
+	    name='add_blog_post'
+    ),
 ]
