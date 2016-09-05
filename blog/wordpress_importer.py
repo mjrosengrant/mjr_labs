@@ -1,5 +1,5 @@
 """ Imports old Posts from Wordpress Database to new Blog."""
-import mysql.connector
+# import mysql.connector
 
 class WordPressImporter(object):
 	pass
