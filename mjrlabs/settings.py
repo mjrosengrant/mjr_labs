@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'mjrlabs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'mjr_labs',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_DIR, 'mjr_labs.db'),
         'USER':"mjrlabs",
         'PASSWORD': 'LUmTq3nLTS4YVdmR',
         'HOST':'localhost',
