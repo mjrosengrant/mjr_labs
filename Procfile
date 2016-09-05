@@ -1,1 +1,1 @@
-web: gunicorn mjrlabs.wsgi --log-file -
+python manage.py runserver
