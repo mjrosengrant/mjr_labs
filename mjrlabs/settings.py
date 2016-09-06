@@ -77,17 +77,17 @@ WSGI_APPLICATION = 'mjrlabs.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_DIR, 'mjr_labs.db'),
-        'USER':"mjrlabs",
-        'PASSWORD': 'LUmTq3nLTS4YVdmR',
-        'HOST':'localhost',
-        'PORT':'',
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'ddpuqnk2p41f1g',                      # Or path to database file if using sqlite3.
+            # The following settings are not used with sqlite3:
+            'USER': 'sexvfaxvprttqe',
+            'PASSWORD': 'p6YLo_k3zEua9ftFviJW',
+            'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+            'PORT': '5432',                      # Set to empty string for default.
+        }
     }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
