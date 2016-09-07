@@ -7,7 +7,7 @@ env/*
 
 .installed.cfg
 env/*
-settings.py
+mjrlabs/settings.py
 bin
 develop-eggs
 dist
