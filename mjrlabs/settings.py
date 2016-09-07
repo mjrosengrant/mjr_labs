@@ -78,13 +78,13 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'ddpuqnk2p41f1g',                      # Or path to database file if using sqlite3.
+        'ENGINE': '', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'sexvfaxvprttqe',
-        'PASSWORD': 'p6YLo_k3zEua9ftFviJW-d3iv-',
-        'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-        'PORT': '5432',                      # Set to empty string for default.
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
     }
 }
 
