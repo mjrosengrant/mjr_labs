@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'krv2+_ps=6!-r@86p%li_csq^idcg5eh6gt1sj3yw=47sg+zf_'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,12 +83,12 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
-        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.        
+        'ENGINE': '',
+        'NAME': '', # Or path to database file if using sqlite3.        
         # The following settings are not used with sqlite3:
-        'USER': 'rsthtsqwydgvnl',
-        'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
-        'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
     }
 }
 
@@ -99,7 +99,6 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
