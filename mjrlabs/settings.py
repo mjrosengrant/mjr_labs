@@ -86,8 +86,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
         'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.        
         # The following settings are not used with sqlite3:
-        'USER': 'sexvfaxvprttqe',
-        'PASSWORD': 'p6YLo_k3zEua9ftFviJW-d3iv-',
+        'USER': 'rsthtsqwydgvnl',
+        'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
         'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',
     }
 }
