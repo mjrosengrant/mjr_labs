@@ -83,12 +83,12 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 DATABASES = {
     'default': {
-        'ENGINE': '', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
-        'NAME': '', # Or path to database file if using sqlite3.        
+        'ENGINE': 'postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
+        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.        
         # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'USER': 'rsthtsqwydgvnl',
+        'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
+        'HOST':'5432',
     }
 }
 
