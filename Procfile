@@ -1,1 +1,1 @@
-web: gunicorn mjrlabs.wsgi --log-file -
+web: python my_django_app/manage.py collectstatic --noinput; gunicorn mjrlabs.wsgi --log-file -
