@@ -1,1 +1,1 @@
-web: gunicorn mjrlabs.wsgi --log-file -
+web: python manage.py collectstatic --no-input; gunicorn mjrlabs.wsgi --log-file -
