@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'MnmzjiyUt50YynALxEsz6e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,13 +83,13 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 DATABASES = {
     'default': {
-        'ENGINE': '', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'django.db.backends.postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'USER': 'rsthtsqwydgvnl',
+        'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
+        'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',  # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        'PORT': '5432',                      # Set to empty string for default.
     }
 }
 
