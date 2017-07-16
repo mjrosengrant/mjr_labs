@@ -12,13 +12,25 @@
     </ul>
   </div>
   <div class="col-md-10">
-    <h1>MJR Labs Blog</h1>
+    <h1>MJR Labs: </h1>
+
         {% if posts %}
           {% for post in posts %}
             {% include "blog/post.html" with post=post %}
           {% endfor %}
         {% else %}
-            <p>There are no posts.</p>
+          <div id="default-post">
+            <p>Welcome to MJR Labs, my personal blog/ Lab notebook </p>
+            
+            <p>I am currently in the process of migrating my blog from a Wordpress site on GoDaddy, to a Django application hosted on Heroku. I have been a fan of Wordpress for a long time, but as a developer I need a platform that provides the flexibility and scalability of a full MVC framework.</p>
+
+            <p>For a long time now, I've wanted to improve my skills as a writer. It's an important means of communication on the Internet, and the ability to write clearly and concisely will go a long way. Once I have a decent page for writing on my backend, I will be sharing random thoughts and opinions here. It feels important to me to use a custom built platform, as opposed to a large social media site like Facebook or Twitter. I'm an idealistic believer in the decentralized internet, and this is an example of me being the change I want to see in the world </p>
+
+            <p>On top of being a writing platform, my plan is to treat this site as a technical sandbox. I like learning about different technologies and frameworks, and I need a space where I can quickly iterate on new projects.</p>
+
+            <p>Check back regularly for updates</p>
+          </div>
+
         {% endif %}
   </div>
 

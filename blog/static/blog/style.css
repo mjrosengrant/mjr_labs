@@ -1,13 +1,7 @@
-.post_body{
-	font-size:18px;
-}
-
-@font-face {
-  font-family: 'My-Handwriting';
-  src: url('fonts/My-Handwriting.ttf');
-}
 
 body {
-	font-family: 'My-Handwriting';
-	font-size: 64px;
+	font-family: 'Sans-serif'
+}
+p {
+	font-size: 18px;
 }
