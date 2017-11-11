@@ -36,11 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polymorphic',
-    'polls',
-    # 'blog',
-    'tinymce',
-    'book_list',
     'pinax.blog',
     'pinax.images',
 ]
@@ -62,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-                    os.path.join(BASE_DIR, 'templates'),
+                    os.path.join(BASE_DIR, 'mjrosengrant_com/templates/mjrosengrant_com'),
                     os.path.join(BASE_DIR, 'pinax/templates/pinax/blog')
                 ],
         'APP_DIRS': True,
