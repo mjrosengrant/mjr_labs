@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -57,9 +58,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-                    os.path.join(BASE_DIR, 'mjrosengrant_com/templates/mjrosengrant_com'),
-                    os.path.join(BASE_DIR, 'pinax/templates/pinax/blog')
-                ],
+            os.path.join(BASE_DIR, 'mjrosengrant_com/templates/mjrosengrant_com'),
+            os.path.join(BASE_DIR, 'pinax/templates/pinax/blog')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,23 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mjrlabs.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
-
-# Added to try and resolve static issues
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', '')
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
-
+# Database
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'django.db.backends.postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

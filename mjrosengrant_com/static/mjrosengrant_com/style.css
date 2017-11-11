@@ -1,7 +1,13 @@
 
 body {
-	font-family: 'Sans-serif'
+	font-family: 'Sans-serif';
+	background-color: black;
 }
+
 p {
 	font-size: 18px;
+}
+
+.panel {
+	background-color: white;
 }
