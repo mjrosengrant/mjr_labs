@@ -3,5 +3,5 @@ from pinax.blog.views import BlogIndexView
 
 
 class IndexView(BlogIndexView):
-	template_name = 'mjrosengrant_com/index.html'
+	template_name = 'index.html'
 	pass
