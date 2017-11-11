@@ -19,9 +19,9 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^blog/', include('blog.urls')),
+    # url(r'^blog/', include('blog.urls')),
 	url(r'^polls/', include('polls.urls')),
 	url(r'^admin/', admin.site.urls),
     url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^$', include('blog.urls')),
+    url(r'', include('pinax.blog.urls')),
 ]

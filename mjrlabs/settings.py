@@ -33,13 +33,16 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polymorphic',
     'polls',
-    'blog',
+    # 'blog',
     'tinymce',
     'book_list',
+    'pinax.blog',
+    'pinax.images',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -58,7 +61,10 @@ ROOT_URLCONF = 'mjrlabs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                    os.path.join(BASE_DIR, 'templates'),
+                    os.path.join(BASE_DIR, 'pinax/templates/pinax/blog')
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,15 +96,22 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'django.db.backends.postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#         'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
+#         # The following settings are not used with sqlite3:
+#         'USER': 'rsthtsqwydgvnl',
+#         'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
+#         'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',  # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+#         'PORT': '5432',                      # Set to empty string for default.
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'django.db.backends.postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': 'rsthtsqwydgvnl',
-        'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
-        'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',  # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-        'PORT': '5432',                      # Set to empty string for default.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mjrlabs_db',
     }
 }
 

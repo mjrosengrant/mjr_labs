@@ -15,8 +15,9 @@
     <h1>MJR Labs: </h1>
 
         {% if posts %}
-          {% for post in posts %}
-            {% include "blog/post.html" with post=post %}
+          {% for post in post_list %}
+            {# include "blog/post.html" with post=post #}
+            {{ post.title }}
           {% endfor %}
         {% else %}
           <div id="default-post">
