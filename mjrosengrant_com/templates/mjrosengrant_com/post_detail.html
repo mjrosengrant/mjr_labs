@@ -7,9 +7,7 @@
         <div class="panel post">
             <h1>{{ post.title }}</h1>
             {% include "pinax/blog/dateline_stale.html" %}
-
             <div class="teaser">{{ post.teaser_html|safe }}</div>
-
             <div class="content">{{ post.content_html|safe }}</div>
         </div>
     </div>

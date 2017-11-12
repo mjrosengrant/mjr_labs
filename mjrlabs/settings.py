@@ -11,6 +11,16 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import environ
+
+root = environ.Path(__file__) - 3 # three folder back (/a/b/c/ - 3 = /)
+env = environ.Env(DEBUG=(bool, False),) # set default values and casting
+environ.Env.read_env() # reading .env file
+
+SITE_ROOT = root()
+
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pinax.blog',
     'pinax.images',
-    # mjr labs apps
     'mjrosengrant_com',
 ]
 
@@ -80,24 +89,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static', '')
 STATIC_URL = '/static/'
 
 # Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'django.db.backends.postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-#         'NAME': 'ddpuqnk2p41f1g', # Or path to database file if using sqlite3.
-#         # The following settings are not used with sqlite3:
-#         'USER': 'rsthtsqwydgvnl',
-#         'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
-#         'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',  # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-#         'PORT': '5432',                      # Set to empty string for default.
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mjrlabs_db',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Add 'django.db.backends.postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'ddpuqnk2p41f1g',  # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'rsthtsqwydgvnl',
+        'PASSWORD': 'lWFAO8gnFpUsCi82l3y65VCwUb',
+        'HOST': 'ec2-54-243-204-57.compute-1.amazonaws.com',  # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        'PORT': '5432',                      # Set to empty string for default.
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mjrlabs_db',
+#     }
+# }
 
 
 # Password validation

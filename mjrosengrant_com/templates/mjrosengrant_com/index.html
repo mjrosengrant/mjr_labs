@@ -5,16 +5,15 @@
 {% block content %}
     <div class="panel title-panel">
       <h1>Mike Rosengrant</h1>
-      <p>Software Engineer. Technologist. Wantrepreneur.</p>
+      <p>Software Engineer. Science Nerd. Wantrepreneur.</p>
     </div>
     {% for post in post_list %}
       <div class="panel post">
           <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
           {% include "pinax/blog/dateline.html" %}
           <div class="teaser">{{ post.teaser_html|safe }}</div>
-          <p class="more"><a href="{# url 'mjrosengrant_com:post' day=post.published.day month=post.published.month year=post.published.year slug=post.slug #}" class="post-link">read more...</a></p>
+          <p class="more"><a href="{{ post.get_absolute_url }}" class="post-link">read more...</a></p>
       </div>
-      <hr>
     {% endfor %}
   </div>
 
