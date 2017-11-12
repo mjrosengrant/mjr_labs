@@ -1,7 +1,10 @@
-
 body {
 	font-family: 'Sans-serif';
-	background-color: black;
+	background-color: #437f97;
+}
+
+.post h2 a {
+	color: #f08700;
 }
 
 p {
@@ -10,4 +13,10 @@ p {
 
 .panel {
 	background-color: white;
+	padding: 1rem 2rem 1rem 2rem;
+}
+
+.sidebar ul li {
+	list-style-type: none;
+	padding:0;
 }

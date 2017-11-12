@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pinax.blog',
     'pinax.images',
+    # mjr labs apps
+    'mjrosengrant_com',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -57,10 +59,7 @@ ROOT_URLCONF = 'mjrlabs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'mjrosengrant_com/templates/mjrosengrant_com'),
-            os.path.join(BASE_DIR, 'pinax/templates/pinax/blog')
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

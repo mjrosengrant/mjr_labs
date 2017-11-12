@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'mjrosengrant_com/base.html' %}
 
 {% block title %}Welcome to my blog{% endblock %}
 
@@ -12,7 +12,7 @@
           <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
           {% include "pinax/blog/dateline.html" %}
           <div class="teaser">{{ post.teaser_html|safe }}</div>
-          <p class="more"><a href="{{ post.get_absolute_url }}" class="post-link">read more...</a></p>
+          <p class="more"><a href="{# url 'mjrosengrant_com:post' day=post.published.day month=post.published.month year=post.published.year slug=post.slug #}" class="post-link">read more...</a></p>
       </div>
       <hr>
     {% endfor %}

@@ -1,4 +1,4 @@
-{% extends "pinax/blog/base.html" %}
+{% extends "mjrosengrant_com/base.html" %}
 
 {% block body_class %}blog blog-post{% endblock %}
 
@@ -27,7 +27,7 @@
 
 {% block content %}
     <div class="post-detail">
-        <div class="post">
+        <div class="post panel">
             <h1>{{ post.title }}</h1>
             {% include "pinax/blog/dateline_stale.html" %}
 
