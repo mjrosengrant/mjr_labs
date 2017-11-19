@@ -19,3 +19,7 @@ lib64
 node_modules/*
 static/*
 .env
+server.csr
+server.crt
+server.key
+
